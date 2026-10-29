@@ -1,0 +1,41 @@
+{
+ "name": "vision-concurrent",
+ "score": 0.75,
+ "cases": 16,
+ "passed": 12,
+ "seconds": 10.620037078857422,
+ "notes": [
+  "16 image/video requests together vs alone",
+  "refused alone (HTTP 400), not run together: video motion, video colours",
+  "two images: missing ['yellow']",
+  "two images: missing ['yellow']",
+  "two images: missing ['yellow']",
+  "two images: missing ['yellow']"
+ ],
+ "details": {
+  "alone": {
+   "shapes": "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+   "text": "TensorFold on DGX Spark",
+   "count": "There are 3 triangles, and they are green.",
+   "two images": "The first image is red, and the second image is green."
+  },
+  "together": [
+   "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+   "TensorFold on DGX Spark",
+   "There are 3 triangles, and they are green.",
+   "The first image is red, and the second image is green.",
+   "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+   "TensorFold on DGX Spark",
+   "There are 3 triangles, and they are green.",
+   "The first image is red, and the second image is green.",
+   "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+   "TensorFold on DGX Spark",
+   "There are 3 triangles, and they are green.",
+   "The first image is red, and the second image is green.",
+   "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+   "TensorFold on DGX Spark",
+   "There are 3 triangles, and they are green.",
+   "The first image is red, and the second image is green."
+  ]
+ }
+}

@@ -1,7 +1,7 @@
 {
  "tokens": "2,406 of a three-turn chat (prose, code, math, German, Chinese, JSON): the corpus TensorFold's CUDA PR #1388 measured",
  "reference": "the release (MiniMaxAI/MiniMax-M3.1-Flash @ 54e4e69d) through tools/zig/minimax_m3_ref.py --logits: MXFP8 and NVFP4 decoded exactly, transformers' order",
- "served": "tf-minimax-run logits (16-row windows from 0, the decode path), engine c11fb68d6, the pack at c33e7a66",
+ "served": "tf-minimax-run logits (16-row windows from 0, the decode path), engine c11fb68d6; af3573193's logits are byte-identical to it on all 2,406 rows",
  "release_vs_metal": {
   "kl_mean": 0.0787,
   "kl_median": 0.00767,
