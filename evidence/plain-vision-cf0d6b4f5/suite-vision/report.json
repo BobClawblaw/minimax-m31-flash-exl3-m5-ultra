@@ -1,0 +1,102 @@
+{
+ "url": "http://127.0.0.1:8897",
+ "model": "MiniMax-M3.1-Flash",
+ "results": [
+  {
+   "name": "vision",
+   "score": 0.5,
+   "cases": 6,
+   "passed": 3,
+   "seconds": 12.36384105682373,
+   "notes": [
+    "two images: missing ['yellow'] in 'The first image is red, and the second image is green.'",
+    "video motion: missing ['left to right/to the right/rightward'] in '<error: HTTP Error 400: Bad Request>'",
+    "video colours: missing ['blue', 'green'] in '<error: HTTP Error 400: Bad Request>'"
+   ],
+   "details": {
+    "shapes": {
+     "reply": "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+     "missing": []
+    },
+    "text": {
+     "reply": "TensorFold on DGX Spark",
+     "missing": []
+    },
+    "count": {
+     "reply": "There are 3 triangles, and they are green.",
+     "missing": []
+    },
+    "two images": {
+     "reply": "The first image is red, and the second image is green.",
+     "missing": [
+      [
+       "yellow"
+      ]
+     ]
+    },
+    "video motion": {
+     "reply": "<error: HTTP Error 400: Bad Request>",
+     "missing": [
+      [
+       "left to right",
+       "to the right",
+       "rightward"
+      ]
+     ]
+    },
+    "video colours": {
+     "reply": "<error: HTTP Error 400: Bad Request>",
+     "missing": [
+      [
+       "blue"
+      ],
+      [
+       "green"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "name": "vision-concurrent",
+   "score": 0.75,
+   "cases": 16,
+   "passed": 12,
+   "seconds": 15.165879011154175,
+   "notes": [
+    "16 image/video requests together vs alone",
+    "refused alone (HTTP 400), not run together: video motion, video colours",
+    "two images: missing ['yellow']",
+    "two images: missing ['yellow']",
+    "two images: missing ['yellow']",
+    "two images: missing ['yellow']"
+   ],
+   "details": {
+    "alone": {
+     "shapes": "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+     "text": "TensorFold on DGX Spark",
+     "count": "There are 3 triangles, and they are green.",
+     "two images": "The first image is red, and the second image is green."
+    },
+    "together": [
+     "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+     "TensorFold on DGX Spark",
+     "There are 3 triangles, and they are green.",
+     "The first image is red, and the second image is green.",
+     "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+     "TensorFold on DGX Spark",
+     "There are 3 triangles, and they are green.",
+     "The first image is red, and the second image is green.",
+     "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+     "TensorFold on DGX Spark",
+     "There are 3 triangles, and they are green.",
+     "The first image is red, and the second image is green.",
+     "The image contains two shapes on a white background:\n- A large red circle on the left.\n- A blue square on the right.\n\nThe text below the circle reads: \"GLM 42\".",
+     "TensorFold on DGX Spark",
+     "There are 3 triangles, and they are green.",
+     "The first image is red, and the second image is green."
+    ]
+   }
+  }
+ ]
+}

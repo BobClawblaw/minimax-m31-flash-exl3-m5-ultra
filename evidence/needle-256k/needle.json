@@ -1,5 +1,5 @@
 {
- "server": "--context 262144 --parallel 2 --prompt-cache-gib 4 --vision, DSpark drafts on, MINIMAX_LOAD_LIMIT_GB=226, bf16 cache, engine ac35cd022",
+ "server": "--context 262144 --parallel 2 --prompt-cache-gib 4 --vision, DSpark drafts on, MINIMAX_LOAD_LIMIT_GB=226, bf16 cache, engine ac35cd022 (before the faster decode kernel)",
  "prompt": "TensorFold's docs and Zig sources (858865 characters) with 'the secret launch code is PURPLE-HARBOR-7349' two fifths in, then the question; thinking off, greedy",
  "prompt_tokens": 227727,
  "cached_tokens": 0,
