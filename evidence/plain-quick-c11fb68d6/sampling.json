@@ -1,0 +1,47 @@
+{
+ "0/0": [
+  "The sea hums soft beneath the moon,  \nA tide of silver, dusk, and blue\u2014  \nIt pulls the sand away, then sweeps it soon,  \nAnd carries distant ships back into the deep.  \n\nNo waves remember where they\u2019ve been;  \nThey rise, and break, and begin again.",
+  "The sea hums soft beneath the moon,  \nA tide of silver, dusk, and blue\u2014  \nIt pulls the sand away, then sweeps it soon,  \nAnd carries distant ships back into the deep.  \n\nNo waves remember where they\u2019ve been;  \nThey rise, and break, and begin again.",
+  "The sea hums soft beneath the moon,  \nA tide of silver, dusk, and blue\u2014  \nIt pulls the sand away, then sweeps it soon,  \nAnd carries distant ships back into the deep.  \n\nNo waves remember where they\u2019ve been;  \nThey rise, and break, and begin again."
+ ],
+ "0/1": [
+  "The sea hums softly in the dark,\nA silver moon upon its back.\nIt carries ships and drifting leaves,\nAnd writes its stories in the waves.",
+  "The sea hums softly in the dark,\nA silver moon upon its back.\nIt carries ships and drifting leaves,\nAnd writes its stories in the waves.",
+  "The sea hums softly in the dark,\nA silver moon upon its back.\nIt carries ships and drifting leaves,\nAnd writes its stories in the waves."
+ ],
+ "0/2": [
+  "The sea hums softly in the dark,\nA silver tide beneath the stars.\nIt pulls the sand from shore to shore,\nAnd carries dreams the waves once bore.\n\nNo moon, no wind, no boat in sight\u2014\nJust endless blue dissolving night.",
+  "The sea hums softly in the dark,\nA silver tide beneath the stars.\nIt pulls the sand from shore to shore,\nAnd carries dreams the waves once bore.\n\nNo moon, no wind, no boat in sight\u2014\nJust endless blue dissolving night.",
+  "The sea hums softly in the dark,\nA silver tide beneath the stars.\nIt pulls the sand from shore to shore,\nAnd carries dreams the waves once bore.\n\nNo moon, no wind, no boat in sight\u2014\nJust endless blue dissolving night."
+ ],
+ "1/0": [
+  "1. **The Steaming Kettle**\n2. **Midnight Grind & Co.**\n3. **Bean There, Brewed That**",
+  "1. **The Steaming Kettle**\n2. **Midnight Grind & Co.**\n3. **Bean There, Brewed That**",
+  "1. **The Steaming Kettle**\n2. **Midnight Grind & Co.**\n3. **Bean There, Brewed That**"
+ ],
+ "1/1": [
+  "1. **The Steaming Bean**\n2. **Midnight Brew & Co.**\n3. **The Percolator\u2019s Perch**",
+  "1. **The Steaming Bean**\n2. **Midnight Brew & Co.**\n3. **The Percolator\u2019s Perch**",
+  "1. **The Steaming Bean**\n2. **Midnight Brew & Co.**\n3. **The Percolator\u2019s Perch**"
+ ],
+ "1/2": [
+  "1. **The Steaming Kettle**\n2. **Bean & Ember**\n3. **The Midnight Grind**",
+  "1. **The Steaming Kettle**\n2. **Bean & Ember**\n3. **The Midnight Grind**",
+  "1. **The Steaming Kettle**\n2. **Bean & Ember**\n3. **The Midnight Grind**"
+ ],
+ "2/0": [
+  "Recursion is when a function solves a problem by calling itself with a smaller version of the same problem. It stops when the problem becomes so simple that the answer can be given directly, without another call.",
+  "Recursion is when a function solves a problem by calling itself with a smaller version of the same problem. It stops when the problem becomes so simple that the answer can be given directly, without another call.",
+  "Recursion is when a function solves a problem by calling itself with a smaller version of the same problem. It stops when the problem becomes so simple that the answer can be given directly, without another call."
+ ],
+ "2/1": [
+  "Recursion is when a function solves a problem by calling itself with a smaller version of that problem. It stops when it reaches a simple case called the **base case**, which returns an answer without calling itself again.",
+  "Recursion is when a function solves a problem by calling itself with a smaller version of that problem. It stops when it reaches a simple case called the **base case**, which returns an answer without calling itself again.",
+  "Recursion is when a function solves a problem by calling itself with a smaller version of that problem. It stops when it reaches a simple case called the **base case**, which returns an answer without calling itself again."
+ ],
+ "2/2": [
+  "Recursion is when a function solves a problem by calling itself with a smaller version of the same problem. It stops when it reaches a simple case called the **base case**, which returns an answer without calling the function again.",
+  "Recursion is when a function solves a problem by calling itself with a smaller version of the same problem. It stops when it reaches a simple case called the **base case**, which returns an answer without calling the function again.",
+  "Recursion is when a function solves a problem by calling itself with a smaller version of the same problem. It stops when it reaches a simple case called the **base case**, which returns an answer without calling the function again."
+ ]
+}
