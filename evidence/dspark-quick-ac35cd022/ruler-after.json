@@ -1,0 +1,47 @@
+{
+ "url": "http://127.0.0.1:8897",
+ "max_tokens": 256,
+ "runs": 3,
+ "cells": [
+  {
+   "concurrency": 1,
+   "phase": "prose",
+   "per_stream": 18.611856121329403,
+   "aggregate": 18.611856121329403,
+   "wall": 16.789107555596928,
+   "ttft": 1.5204156669788063,
+   "tokens_mean": 256.0,
+   "runs": 3
+  },
+  {
+   "concurrency": 1,
+   "phase": "code",
+   "per_stream": 20.30322414122607,
+   "aggregate": 20.30322414122607,
+   "wall": 18.061102650005793,
+   "ttft": 1.614367250003852,
+   "tokens_mean": 256.0,
+   "runs": 3
+  },
+  {
+   "concurrency": 1,
+   "phase": "structured",
+   "per_stream": 17.774650713402288,
+   "aggregate": 17.774650713402288,
+   "wall": 15.113876458404881,
+   "ttft": 1.602684749988839,
+   "tokens_mean": 156.0,
+   "runs": 3
+  },
+  {
+   "concurrency": 1,
+   "phase": "list",
+   "per_stream": 18.615160518356866,
+   "aggregate": 18.615160518356866,
+   "wall": 16.24032839608979,
+   "ttft": 1.517369500012137,
+   "tokens_mean": 186.0,
+   "runs": 3
+  }
+ ]
+}

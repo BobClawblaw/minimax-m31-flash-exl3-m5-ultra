@@ -1,0 +1,10 @@
+{
+ "tokens": "2,406 of a three-turn chat (prose, code, math, German, Chinese, JSON): the corpus TensorFold's CUDA PR #1388 measured",
+ "reference": "the release (MiniMaxAI/MiniMax-M3.1-Flash @ 54e4e69d) through tools/zig/minimax_m3_ref.py --logits: MXFP8 and NVFP4 decoded exactly, transformers' order",
+ "served": "tf-minimax-run logits (16-row windows from 0, the decode path), engine dbcb9d791, the pack at c33e7a66",
+ "release_vs_metal": {"kl_mean": 0.0741, "kl_median": 0.00722, "kl_p99": 0.853, "top1": 0.9057, "kl_mean_from_2048": 0.0679},
+ "release_vs_cuda": {"kl_mean": 0.0788, "kl_median": 0.00763, "kl_p99": 0.974, "top1": 0.9036, "note": "the same tool on #1388's engine-final logits (its own report counts ties differently: 89.90%)"},
+ "cuda_vs_metal": {"kl_mean": 0.0125, "kl_median": 0.00057, "top1": 0.9755},
+ "prompt_chunks": {"setup": "a 1,000-token prompt in chunks (tensor-unit path), then rows 1,000-1,405 forced", "release_vs_prompt_path": {"kl_mean": 0.0135, "top1": 0.9704}, "release_vs_windows_same_rows": {"kl_mean": 0.0140, "top1": 0.9680}, "windows_vs_prompt_path": {"kl_mean": 0.0012, "top1": 0.9926}},
+ "kl": "KL(release || served) in float64 over the whole vocabulary, per row, then the mean"
+}

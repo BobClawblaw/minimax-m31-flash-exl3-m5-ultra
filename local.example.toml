@@ -1,0 +1,8 @@
+# Copy to local.toml (git-ignored) and change what differs on this Mac.
+[engine]
+tensorfold_src = "~/github/TensorFold"            # a clone of github.com/BobClawblaw/TensorFold holding tensorfold_sha
+zig = "~/tools/zig-0.17.0/zig"
+
+[local]
+host = "127.0.0.1"
+port = 8897

@@ -1,0 +1,102 @@
+{
+ "turn1": {
+  "status": 200,
+  "text": "The Danube, the Rhine, and the Seine.",
+  "ttft": 11.307,
+  "ttft_any": 11.307,
+  "usage": {
+   "prompt_tokens": 4658,
+   "completion_tokens": 11,
+   "total_tokens": 4669,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 11.896,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn2": {
+  "status": 200,
+  "text": "The Danube is the longest of the three, flowing about 2,850 km through ten countries before reaching the Black Sea.",
+  "ttft": 1.054,
+  "ttft_any": 1.054,
+  "usage": {
+   "prompt_tokens": 4685,
+   "completion_tokens": 26,
+   "total_tokens": 4711,
+   "prompt_tokens_details": {
+    "cached_tokens": 4645
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 2.524,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn3": {
+  "status": 200,
+  "text": "The Seine is the shortest of the three, at about 777 km long.",
+  "ttft": 1.289,
+  "ttft_any": 1.289,
+  "usage": {
+   "prompt_tokens": 4725,
+   "completion_tokens": 17,
+   "total_tokens": 4742,
+   "prompt_tokens_details": {
+    "cached_tokens": 4645
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 2.593,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn3_again": {
+  "status": 200,
+  "text": "The Seine is the shortest of the three, at about 777 km long.",
+  "ttft": 1.293,
+  "ttft_any": 1.293,
+  "usage": {
+   "prompt_tokens": 4725,
+   "completion_tokens": 17,
+   "total_tokens": 4742,
+   "prompt_tokens_details": {
+    "cached_tokens": 4645
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 2.601,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn3_cold": {
+  "status": 200,
+  "text": "The Seine is the shortest of the three, at about 777 km long.",
+  "ttft": 11.913,
+  "ttft_any": 11.913,
+  "usage": {
+   "prompt_tokens": 4725,
+   "completion_tokens": 17,
+   "total_tokens": 4742,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 13.226,
+  "finish": "stop",
+  "tool_calls": null
+ }
+}
