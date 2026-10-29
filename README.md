@@ -114,6 +114,9 @@ at 667 million weights a second. That is also why the pack's DSpark head does no
 its own four experts, whose 3-bit weights must be decoded too, so a round costs 74-79 ms against a plain step's 51.
 The recipe serves plain (`drafts = false`); `drafts = true` turns the head on (about 5.3 GiB more: its 2.1 GiB shard and 3.2 GiB widened).
 
+**TensorFold leaderboard** (community-v1, the board's own suite on the public pack, engine `afcc366c1` with its
+DSpark head, which the benchmark turns on): [result 4ed6e6ee](https://tensorfold.dev/benchmarks?result=4ed6e6ee-5479-44f6-8a41-cf0a236500df).
+
 **Quality suites were not run** on this build (the harness's quality plans run only when asked); the fidelity
 numbers above are the quality evidence so far.
 
