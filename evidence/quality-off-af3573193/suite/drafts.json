@@ -1,0 +1,184 @@
+{
+ "name": "drafts",
+ "score": 1.0,
+ "cases": 12,
+ "passed": 12,
+ "seconds": 117.60922479629517,
+ "notes": [
+  "drafted 20 tok/s vs undrafted 20 tok/s"
+ ],
+ "details": {
+  "drafted": [
+   {
+    "prompt": "Explain, in about 150 words, why the sky is blue and sunsets are red.",
+    "sha": "b3877c3724f9",
+    "tokens": 151,
+    "tok_s": 25.2754359921268,
+    "text": "The sky looks blue because sunlight contains many colors, and air molecules scatter short wavelengths\u2014blue and violet\u2014more strongly than long wavelengths. This scattering, called Rayleigh scattering, spreads blue light across the sky in every direction. Our eyes are more sensitive to blue than violet, and some violet light is absorbed by the atmosphere, so the sky appears blue.\n\nSunsets look red because sunlight must travel through much more atmosphere to reach you when the Sun is low. Along its long path, most blue light is scattered out of the direct beam, leaving mainly red and orange wavelengths to reach your eyes. The closer the Sun is to the horizon, the more atmosphere the light crosses, making the sunset redder. Dust and pollution can also intensify these colors."
+   },
+   {
+    "prompt": "Write a Python function that parses an ISO-8601 date string and returns the day of the week, with a docstring and two examples.",
+    "sha": "7b217e787a99",
+    "tokens": 190,
+    "tok_s": 26.487380864550513,
+    "text": "```python\nfrom datetime import date\n\n\ndef day_of_week(iso_date: str) -> str:\n    \"\"\"Return the day of the week for an ISO-8601 date string (YYYY-MM-DD).\n\n    Args:\n        iso_date: A date string in ISO-8601 format, e.g. \"2024-07-04\".\n\n    Returns:\n        The weekday name, e.g. \"Thursday\".\n\n    Raises:\n        ValueError: If the string is not a valid ISO-8601 date.\n    \"\"\"\n    return date.fromisoformat(iso_date).strftime(\"%A\")\n\n\n# Examples\nprint(day_of_week(\"2024-07-04\"))  # Thursday\nprint(day_of_week(\"2000-01-01\"))  # Saturday\n```\n\n`date.fromisoformat` validates the input and raises `ValueError` for malformed dates or impossible dates such as `\"2023-02-30\"`."
+   },
+   {
+    "prompt": "List five differences between TCP and UDP as a numbered list, one sentence each.",
+    "sha": "1b866f4ad452",
+    "tokens": 136,
+    "tok_s": 24.708451253180783,
+    "text": "1. TCP is connection-oriented and establishes a connection before data transfer, while UDP is connectionless and sends data without establishing a connection.\n2. TCP provides reliable delivery with acknowledgments, retransmissions, and ordering, while UDP does not guarantee delivery or ordering.\n3. TCP uses flow control and congestion control to regulate data transmission, while UDP lacks these mechanisms.\n4. TCP has higher overhead due to its connection setup and reliability features, while UDP has lower overhead and lower latency.\n5. TCP is suited for applications requiring accuracy, such as web browsing and file transfers, while UDP is suited for real-time applications where speed matters more, such as video streaming and online gaming."
+   },
+   {
+    "prompt": "Translate to French: 'The committee postponed the vote until the engineers had finished their report.'",
+    "sha": "f46510fe1149",
+    "tokens": 19,
+    "tok_s": 9.44945291071726,
+    "text": "Le comit\u00e9 a report\u00e9 le vote jusqu'\u00e0 ce que les ing\u00e9nieurs aient termin\u00e9 leur rapport."
+   },
+   {
+    "prompt": "Write a bash script that renames every .jpeg file in a directory tree to .jpg, skipping files whose target name exists, and prints a summary.",
+    "sha": "6e2e1a89c071",
+    "tokens": 300,
+    "tok_s": 28.46944717243921,
+    "text": "Here's a bash script that renames all `.jpeg` files to `.jpg` recursively, skips files where the target already exists, and prints a summary:\n\n```bash\n#!/usr/bin/env bash\n\n# Renames all .jpeg files to .jpg in a directory tree.\n# Usage: ./rename_jpeg.sh [directory]\n\nset -u\n\ndir=\"${1:-.}\"\n\nif [[ ! -d \"$dir\" ]]; then\n    echo \"Error: '$dir' is not a directory.\" >&2\n    exit 1\nfi\n\nrenamed=0\nskipped=0\nfailed=0\n\nwhile IFS= read -r -d '' file; do\n    target=\"${file%.jpeg}.jpg\"\n\n    if [[ -e \"$target\" ]]; then\n        echo \"SKIP: '$target' already exists (source: '$file')\"\n        ((skipped++))\n    elif mv -- \"$file\" \"$target\"; then\n        echo \"RENAMED: '$file' -> '$target'\"\n        ((renamed++))\n    else\n        echo \"FAILED: could not rename '$file'\" >&2\n        ((failed++))\n    fi\ndone < <(find \"$dir\" -type f -name '*.jpeg' -print0)\n\necho\necho \"=== Summary ===\"\necho \"Renamed: $renamed\"\necho \"Skipped: $skipped\"\necho \"Failed:  $failed\"\n```\n\nKey points:\n- **`find"
+   },
+   {
+    "prompt": "A train leaves at 09:40 and arrives at 14:05 after a 25-minute stop. What is its moving time? Show the steps briefly.",
+    "sha": "160ca427bd66",
+    "tokens": 61,
+    "tok_s": 18.325009285893824,
+    "text": "1. Total elapsed time: 09:40 \u2192 14:05 = 4 hours 25 minutes  \n2. Subtract the 25-minute stop: 4 hours 25 minutes \u2212 25 minutes = **4 hours**\n\n**Moving time: 4 hours (240 minutes).**"
+   },
+   {
+    "prompt": "Summarize the plot of a heist film you invent, in exactly four sentences.",
+    "sha": "a6ebe1d43e30",
+    "tokens": 125,
+    "tok_s": 24.09640760624676,
+    "text": "In *The Velvet Vault*, an elite crew of thieves steals priceless diamonds from a Monaco casino during a blackout orchestrated by a hacker. Each thief receives a different half of the map needed to find the vault, but the hacker secretly alters one piece to lead them into a trap. Pursued by an international police force and betrayed by an insider, the crew must reunite the map fragments and outwit the casino\u2019s security before the diamonds are recovered. In the end, the hacker reveals the theft was a scheme to expose the casino owner\u2019s money laundering, and the crew escapes with both the diamonds and evidence of the crime."
+   },
+   {
+    "prompt": "Give a JSON array of three objects, each with keys city, country and population (integer), for three large Asian cities.",
+    "sha": "932341ead296",
+    "tokens": 85,
+    "tok_s": 21.098054669048736,
+    "text": "[\n  {\n    \"city\": \"Tokyo\",\n    \"country\": \"Japan\",\n    \"population\": 13960000\n  },\n  {\n    \"city\": \"Delhi\",\n    \"country\": \"India\",\n    \"population\": 32941000\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"country\": \"China\",\n    \"population\": 29210000\n  }\n]"
+   },
+   {
+    "prompt": "Rewrite this sentence in the passive voice and then in the imperative: 'The engineer calibrates the sensor every morning.'",
+    "sha": "683625c7bc99",
+    "tokens": 27,
+    "tok_s": 11.904302633785898,
+    "text": "**Passive voice:** The sensor is calibrated by the engineer every morning.\n\n**Imperative:** Calibrate the sensor every morning."
+   },
+   {
+    "prompt": "What is 17 * 23? Then subtract 91 and divide by 5. Show each step.",
+    "sha": "d73c0fa89cd9",
+    "tokens": 55,
+    "tok_s": 17.622742032657644,
+    "text": "1. **Multiply:** 17 \u00d7 23 = 391\n2. **Subtract 91:** 391 \u2212 91 = 300\n3. **Divide by 5:** 300 \u00f7 5 = 60\n\n**Answer: 60**"
+   },
+   {
+    "prompt": "Write a haiku about a lighthouse, then explain its syllable count.",
+    "sha": "b9b815cf4a4e",
+    "tokens": 193,
+    "tok_s": 26.673010144502058,
+    "text": "**Haiku**\n\nLights sweep the darkened bay,  \nA steady flame against the night\u2014  \nThe sea forgets its fear.\n\n**Syllable count**\n\n- **Lights sweep the darkened bay** \u2014 5 syllables: *lights* (1), *sweep* (1), *the* (1), *dark-ened* (2), *bay* (1)\n- **A steady flame against the night** \u2014 7 syllables: *a* (1), *stead-y* (2), *flame* (1), *a-gainst* (2), *the* (1), *night* (1)\n- **The sea forgets its fear** \u2014 5 syllables: *the* (1), *sea* (1), *for-gets* (2), *its* (1), *fear* (1)\n\nTotal: **5\u20137\u20135**, the traditional haiku pattern."
+   },
+   {
+    "prompt": "Name the planets of the solar system in order from the Sun, one per line, and mark the gas giants with an asterisk.",
+    "sha": "2f193c0f0914",
+    "tokens": 27,
+    "tok_s": 11.780580365905799,
+    "text": "Mercury\nVenus\nEarth\nMars\n*Jupiter\n*Saturn\n*Uranus\n*Neptune"
+   }
+  ],
+  "undrafted": [
+   {
+    "prompt": "Explain, in about 150 words, why the sky is blue and sunsets are red.",
+    "sha": "b3877c3724f9",
+    "tokens": 151,
+    "tok_s": 25.288819568131395,
+    "text": "The sky looks blue because sunlight contains many colors, and air molecules scatter short wavelengths\u2014blue and violet\u2014more strongly than long wavelengths. This scattering, called Rayleigh scattering, spreads blue light across the sky in every direction. Our eyes are more sensitive to blue than violet, and some violet light is absorbed by the atmosphere, so the sky appears blue.\n\nSunsets look red because sunlight must travel through much more atmosphere to reach you when the Sun is low. Along its long path, most blue light is scattered out of the direct beam, leaving mainly red and orange wavelengths to reach your eyes. The closer the Sun is to the horizon, the more atmosphere the light crosses, making the sunset redder. Dust and pollution can also intensify these colors."
+   },
+   {
+    "prompt": "Write a Python function that parses an ISO-8601 date string and returns the day of the week, with a docstring and two examples.",
+    "sha": "7b217e787a99",
+    "tokens": 190,
+    "tok_s": 26.39625264774168,
+    "text": "```python\nfrom datetime import date\n\n\ndef day_of_week(iso_date: str) -> str:\n    \"\"\"Return the day of the week for an ISO-8601 date string (YYYY-MM-DD).\n\n    Args:\n        iso_date: A date string in ISO-8601 format, e.g. \"2024-07-04\".\n\n    Returns:\n        The weekday name, e.g. \"Thursday\".\n\n    Raises:\n        ValueError: If the string is not a valid ISO-8601 date.\n    \"\"\"\n    return date.fromisoformat(iso_date).strftime(\"%A\")\n\n\n# Examples\nprint(day_of_week(\"2024-07-04\"))  # Thursday\nprint(day_of_week(\"2000-01-01\"))  # Saturday\n```\n\n`date.fromisoformat` validates the input and raises `ValueError` for malformed dates or impossible dates such as `\"2023-02-30\"`."
+   },
+   {
+    "prompt": "List five differences between TCP and UDP as a numbered list, one sentence each.",
+    "sha": "1b866f4ad452",
+    "tokens": 136,
+    "tok_s": 24.641054238263482,
+    "text": "1. TCP is connection-oriented and establishes a connection before data transfer, while UDP is connectionless and sends data without establishing a connection.\n2. TCP provides reliable delivery with acknowledgments, retransmissions, and ordering, while UDP does not guarantee delivery or ordering.\n3. TCP uses flow control and congestion control to regulate data transmission, while UDP lacks these mechanisms.\n4. TCP has higher overhead due to its connection setup and reliability features, while UDP has lower overhead and lower latency.\n5. TCP is suited for applications requiring accuracy, such as web browsing and file transfers, while UDP is suited for real-time applications where speed matters more, such as video streaming and online gaming."
+   },
+   {
+    "prompt": "Translate to French: 'The committee postponed the vote until the engineers had finished their report.'",
+    "sha": "f46510fe1149",
+    "tokens": 19,
+    "tok_s": 9.425102055243356,
+    "text": "Le comit\u00e9 a report\u00e9 le vote jusqu'\u00e0 ce que les ing\u00e9nieurs aient termin\u00e9 leur rapport."
+   },
+   {
+    "prompt": "Write a bash script that renames every .jpeg file in a directory tree to .jpg, skipping files whose target name exists, and prints a summary.",
+    "sha": "6e2e1a89c071",
+    "tokens": 300,
+    "tok_s": 27.696096197013492,
+    "text": "Here's a bash script that renames all `.jpeg` files to `.jpg` recursively, skips files where the target already exists, and prints a summary:\n\n```bash\n#!/usr/bin/env bash\n\n# Renames all .jpeg files to .jpg in a directory tree.\n# Usage: ./rename_jpeg.sh [directory]\n\nset -u\n\ndir=\"${1:-.}\"\n\nif [[ ! -d \"$dir\" ]]; then\n    echo \"Error: '$dir' is not a directory.\" >&2\n    exit 1\nfi\n\nrenamed=0\nskipped=0\nfailed=0\n\nwhile IFS= read -r -d '' file; do\n    target=\"${file%.jpeg}.jpg\"\n\n    if [[ -e \"$target\" ]]; then\n        echo \"SKIP: '$target' already exists (source: '$file')\"\n        ((skipped++))\n    elif mv -- \"$file\" \"$target\"; then\n        echo \"RENAMED: '$file' -> '$target'\"\n        ((renamed++))\n    else\n        echo \"FAILED: could not rename '$file'\" >&2\n        ((failed++))\n    fi\ndone < <(find \"$dir\" -type f -name '*.jpeg' -print0)\n\necho\necho \"=== Summary ===\"\necho \"Renamed: $renamed\"\necho \"Skipped: $skipped\"\necho \"Failed:  $failed\"\n```\n\nKey points:\n- **`find"
+   },
+   {
+    "prompt": "A train leaves at 09:40 and arrives at 14:05 after a 25-minute stop. What is its moving time? Show the steps briefly.",
+    "sha": "160ca427bd66",
+    "tokens": 61,
+    "tok_s": 18.316855626635352,
+    "text": "1. Total elapsed time: 09:40 \u2192 14:05 = 4 hours 25 minutes  \n2. Subtract the 25-minute stop: 4 hours 25 minutes \u2212 25 minutes = **4 hours**\n\n**Moving time: 4 hours (240 minutes).**"
+   },
+   {
+    "prompt": "Summarize the plot of a heist film you invent, in exactly four sentences.",
+    "sha": "a6ebe1d43e30",
+    "tokens": 125,
+    "tok_s": 24.116242993984937,
+    "text": "In *The Velvet Vault*, an elite crew of thieves steals priceless diamonds from a Monaco casino during a blackout orchestrated by a hacker. Each thief receives a different half of the map needed to find the vault, but the hacker secretly alters one piece to lead them into a trap. Pursued by an international police force and betrayed by an insider, the crew must reunite the map fragments and outwit the casino\u2019s security before the diamonds are recovered. In the end, the hacker reveals the theft was a scheme to expose the casino owner\u2019s money laundering, and the crew escapes with both the diamonds and evidence of the crime."
+   },
+   {
+    "prompt": "Give a JSON array of three objects, each with keys city, country and population (integer), for three large Asian cities.",
+    "sha": "932341ead296",
+    "tokens": 85,
+    "tok_s": 21.108304788843604,
+    "text": "[\n  {\n    \"city\": \"Tokyo\",\n    \"country\": \"Japan\",\n    \"population\": 13960000\n  },\n  {\n    \"city\": \"Delhi\",\n    \"country\": \"India\",\n    \"population\": 32941000\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"country\": \"China\",\n    \"population\": 29210000\n  }\n]"
+   },
+   {
+    "prompt": "Rewrite this sentence in the passive voice and then in the imperative: 'The engineer calibrates the sensor every morning.'",
+    "sha": "683625c7bc99",
+    "tokens": 27,
+    "tok_s": 11.931648449094471,
+    "text": "**Passive voice:** The sensor is calibrated by the engineer every morning.\n\n**Imperative:** Calibrate the sensor every morning."
+   },
+   {
+    "prompt": "What is 17 * 23? Then subtract 91 and divide by 5. Show each step.",
+    "sha": "d73c0fa89cd9",
+    "tokens": 55,
+    "tok_s": 17.707274681836484,
+    "text": "1. **Multiply:** 17 \u00d7 23 = 391\n2. **Subtract 91:** 391 \u2212 91 = 300\n3. **Divide by 5:** 300 \u00f7 5 = 60\n\n**Answer: 60**"
+   },
+   {
+    "prompt": "Write a haiku about a lighthouse, then explain its syllable count.",
+    "sha": "b9b815cf4a4e",
+    "tokens": 193,
+    "tok_s": 26.722897676422136,
+    "text": "**Haiku**\n\nLights sweep the darkened bay,  \nA steady flame against the night\u2014  \nThe sea forgets its fear.\n\n**Syllable count**\n\n- **Lights sweep the darkened bay** \u2014 5 syllables: *lights* (1), *sweep* (1), *the* (1), *dark-ened* (2), *bay* (1)\n- **A steady flame against the night** \u2014 7 syllables: *a* (1), *stead-y* (2), *flame* (1), *a-gainst* (2), *the* (1), *night* (1)\n- **The sea forgets its fear** \u2014 5 syllables: *the* (1), *sea* (1), *for-gets* (2), *its* (1), *fear* (1)\n\nTotal: **5\u20137\u20135**, the traditional haiku pattern."
+   },
+   {
+    "prompt": "Name the planets of the solar system in order from the Sun, one per line, and mark the gas giants with an asterisk.",
+    "sha": "2f193c0f0914",
+    "tokens": 27,
+    "tok_s": 11.851252948797745,
+    "text": "Mercury\nVenus\nEarth\nMars\n*Jupiter\n*Saturn\n*Uranus\n*Neptune"
+   }
+  ]
+ }
+}

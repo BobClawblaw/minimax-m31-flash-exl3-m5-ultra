@@ -1,0 +1,435 @@
+{
+ "url": "http://127.0.0.1:8897",
+ "model": "MiniMax-M3.1-Flash",
+ "results": [
+  {
+   "name": "math500",
+   "score": 0.844,
+   "cases": 500,
+   "passed": 422,
+   "seconds": 8288.371263027191,
+   "notes": [
+    "L1 40/43 L2 84/90 L3 89/105 L4 111/128 L5 98/134, 56 without a boxed answer"
+   ],
+   "details": {
+    "n": 500,
+    "thinking": false,
+    "by_level": {
+     "2": [
+      84,
+      90
+     ],
+     "5": [
+      98,
+      134
+     ],
+     "3": [
+      89,
+      105
+     ],
+     "4": [
+      111,
+      128
+     ],
+     "1": [
+      40,
+      43
+     ]
+    },
+    "unboxed": 56,
+    "misses": [
+     {
+      "i": 5,
+      "gold": "42",
+      "got": "36"
+     },
+     {
+      "i": 17,
+      "gold": "\\pi",
+      "got": null
+     },
+     {
+      "i": 20,
+      "gold": "6+9i",
+      "got": "117 + 41i"
+     },
+     {
+      "i": 36,
+      "gold": "3, 5, 7",
+      "got": "x\\in\\{3,\\,5,\\,7\\}"
+     },
+     {
+      "i": 43,
+      "gold": "70 \\sqrt{2}",
+      "got": null
+     },
+     {
+      "i": 60,
+      "gold": "(6,31,-1)",
+      "got": ""
+     },
+     {
+      "i": 65,
+      "gold": "1",
+      "got": null
+     },
+     {
+      "i": 71,
+      "gold": "2516_8",
+      "got": "523C_8"
+     },
+     {
+      "i": 76,
+      "gold": "0",
+      "got": null
+     },
+     {
+      "i": 88,
+      "gold": "2",
+      "got": null
+     },
+     {
+      "i": 96,
+      "gold": "1 \\pm \\sqrt{19}",
+      "got": null
+     },
+     {
+      "i": 99,
+      "gold": "\\begin{pmatrix} -1/3 \\\\ 2/3 \\\\ 5/3 \\end{pmatrix}",
+      "got": "\\mathbf{v} = \\begin{pmatrix} -\\frac{1}{3} \\\\[2pt] \\frac{2}{3} \\\\[2pt] \\frac{5}{3} \\end{pmatrix}"
+     },
+     {
+      "i": 101,
+      "gold": "850",
+      "got": null
+     },
+     {
+      "i": 103,
+      "gold": "(3,4]",
+      "got": "3<\\lambda\\le4"
+     },
+     {
+      "i": 104,
+      "gold": "40",
+      "got": null
+     },
+     {
+      "i": 108,
+      "gold": "2",
+      "got": null
+     },
+     {
+      "i": 110,
+      "gold": "504",
+      "got": null
+     },
+     {
+      "i": 119,
+      "gold": "-9",
+      "got": null
+     },
+     {
+      "i": 127,
+      "gold": "4210_{5}",
+      "got": "4210_5"
+     },
+     {
+      "i": 128,
+      "gold": "36",
+      "got": null
+     },
+     {
+      "i": 139,
+      "gold": "1",
+      "got": null
+     },
+     {
+      "i": 141,
+      "gold": "2",
+      "got": null
+     },
+     {
+      "i": 144,
+      "gold": "(15,-29)",
+      "got": "(-14, y)"
+     },
+     {
+      "i": 154,
+      "gold": "2\\sqrt{113}",
+      "got": null
+     },
+     {
+      "i": 163,
+      "gold": "-\\frac{35}{9}",
+      "got": "-\\frac{323}{9}"
+     },
+     {
+      "i": 166,
+      "gold": "\\frac{270}7\\text{ degrees}",
+      "got": "\\frac{270}{7}"
+     },
+     {
+      "i": 168,
+      "gold": "19",
+      "got": null
+     },
+     {
+      "i": 173,
+      "gold": "4",
+      "got": null
+     },
+     {
+      "i": 186,
+      "gold": "7",
+      "got": "8"
+     },
+     {
+      "i": 188,
+      "gold": "6",
+      "got": null
+     },
+     {
+      "i": 189,
+      "gold": "160",
+      "got": null
+     },
+     {
+      "i": 193,
+      "gold": "4",
+      "got": null
+     },
+     {
+      "i": 194,
+      "gold": "\\frac{1}{4}",
+      "got": null
+     },
+     {
+      "i": 204,
+      "gold": "0",
+      "got": null
+     },
+     {
+      "i": 213,
+      "gold": "2",
+      "got": null
+     },
+     {
+      "i": 217,
+      "gold": "11,\\! 111,\\! 111,\\! 100",
+      "got": "11111111100"
+     },
+     {
+      "i": 228,
+      "gold": "288 \\pi",
+      "got": null
+     },
+     {
+      "i": 236,
+      "gold": "12",
+      "got": null
+     },
+     {
+      "i": 239,
+      "gold": "16",
+      "got": null
+     },
+     {
+      "i": 240,
+      "gold": "116",
+      "got": null
+     },
+     {
+      "i": 264,
+      "gold": "1\\frac{4}{5}",
+      "got": null
+     },
+     {
+      "i": 284,
+      "gold": "3 \\pm 2 \\sqrt{2}",
+      "got": null
+     },
+     {
+      "i": 286,
+      "gold": "\\frac{17}{21}",
+      "got": null
+     },
+     {
+      "i": 295,
+      "gold": "11",
+      "got": null
+     },
+     {
+      "i": 296,
+      "gold": "\\text{(B)}",
+      "got": "\\textbf{(B)}\\ 3\\left(1+\\frac{r}{10}\\right)^x = 7"
+     },
+     {
+      "i": 306,
+      "gold": "6",
+      "got": null
+     },
+     {
+      "i": 308,
+      "gold": "1+2\\sqrt{3}",
+      "got": null
+     },
+     {
+      "i": 309,
+      "gold": "14",
+      "got": null
+     },
+     {
+      "i": 318,
+      "gold": "\\frac{11+9a}{20}",
+      "got": "\\frac{9a+11}{20}"
+     },
+     {
+      "i": 323,
+      "gold": "\\frac{1}{3}",
+      "got": null
+     },
+     {
+      "i": 327,
+      "gold": "15",
+      "got": null
+     },
+     {
+      "i": 332,
+      "gold": "2",
+      "got": null
+     },
+     {
+      "i": 333,
+      "gold": "3",
+      "got": "4"
+     },
+     {
+      "i": 339,
+      "gold": "2k",
+      "got": null
+     },
+     {
+      "i": 340,
+      "gold": "55^\\circ",
+      "got": null
+     },
+     {
+      "i": 341,
+      "gold": "-2",
+      "got": null
+     },
+     {
+      "i": 349,
+      "gold": "10080",
+      "got": null
+     },
+     {
+      "i": 352,
+      "gold": "11 \\sqrt{5} + 11",
+      "got": null
+     },
+     {
+      "i": 355,
+      "gold": "100",
+      "got": null
+     },
+     {
+      "i": 371,
+      "gold": "17",
+      "got": null
+     },
+     {
+      "i": 379,
+      "gold": "12",
+      "got": "12^{\\text{th}}\\text{ grade}"
+     },
+     {
+      "i": 383,
+      "gold": "x \\in [-2,7]",
+      "got": "[-2,\\,7]"
+     },
+     {
+      "i": 390,
+      "gold": "12",
+      "got": null
+     },
+     {
+      "i": 394,
+      "gold": "-\\frac{3}{8}",
+      "got": null
+     },
+     {
+      "i": 396,
+      "gold": "2",
+      "got": null
+     },
+     {
+      "i": 400,
+      "gold": "\\frac{14}{3}",
+      "got": null
+     },
+     {
+      "i": 408,
+      "gold": "\\begin{pmatrix} 1/5 \\\\ -18/5 \\end{pmatrix}",
+      "got": "\\begin{pmatrix}\\frac{1}{5}\\\\[2pt]-\\frac{18}{5}\\end{pmatrix}"
+     },
+     {
+      "i": 420,
+      "gold": "\\begin{pmatrix} 16/49 \\\\ 48/49 \\\\ 24/49 \\end{pmatrix}",
+      "got": "\\begin{pmatrix} \\frac{16}{49} \\\\ \\frac{48}{49} \\\\ \\frac{24}{49} \\end{pmatrix}"
+     },
+     {
+      "i": 421,
+      "gold": "27",
+      "got": null
+     },
+     {
+      "i": 422,
+      "gold": "\\{1\\pm\\sqrt{5},-2\\}",
+      "got": "\\{-2,\\ 1-\\sqrt5,\\ 1+\\sqrt5\\}"
+     },
+     {
+      "i": 425,
+      "gold": "3R^2",
+      "got": null
+     },
+     {
+      "i": 444,
+      "gold": "\\frac{1}{2}",
+      "got": null
+     },
+     {
+      "i": 475,
+      "gold": "29",
+      "got": null
+     },
+     {
+      "i": 477,
+      "gold": "2",
+      "got": "3"
+     },
+     {
+      "i": 478,
+      "gold": "\\frac{2}{1005}",
+      "got": null
+     },
+     {
+      "i": 483,
+      "gold": "\\frac{8}{15}",
+      "got": null
+     },
+     {
+      "i": 485,
+      "gold": "13",
+      "got": null
+     },
+     {
+      "i": 490,
+      "gold": "14",
+      "got": null
+     }
+    ]
+   }
+  }
+ ]
+}

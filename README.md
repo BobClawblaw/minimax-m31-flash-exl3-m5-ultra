@@ -22,7 +22,9 @@ and reads prompts at about 500 tokens a second against its 1,480.
 | Weights held (with the tower) | 158.9 GiB | see its README |
 | Window served | 262,144 tokens (383,360 fit) | 147,456 tokens |
 
-Pick this one when answers matter more than speed; the mix256k recipe when speed does.
+Which to pick: this one stays much closer to the release (the KL above) and follows instructions better (IFEval
+110 of 150 against 88); mix256k is faster and scored higher on MATH-500 (459 of 500 against 422). The other quality
+suites land within a few questions of each other (Quality, below).
 
 ## Run it
 
@@ -124,8 +126,25 @@ shard and 3.2 GiB widened), worth it for code.
 **TensorFold leaderboard** (community-v1, the board's own suite on the public pack, engine `af3573193` with its
 DSpark head, which the benchmark turns on): [result d853e54d](https://tensorfold.dev/benchmarks?result=d853e54d-6f51-4ff5-9bd8-5bed22c6605d).
 
-**Quality suites were not run** on this build (the harness's quality plans run only when asked); the fidelity
-numbers above are the quality evidence so far.
+**Quality**, thinking off (the harness's `dsv41-quality-off` suite, the same suite code as mix256k's run), on the
+pinned engine without drafts. The run was stopped before MATH-500 to free the Mac; MATH-500 then ran on its own on
+the same binary (`evidence/quality-off-af3573193`, `evidence/math500-af3573193`). mix256k's column is its pinned
+engine's run, from [its README](https://github.com/BobClawblaw/minimax-m31-flash-mlx-m5-ultra):
+
+| | this recipe | mix256k |
+|---|---:|---:|
+| IFEval, loose (150) | **110** (0.733; strict 104) | 88 (0.587; strict 77) |
+| tools (60) | 57 | 55 |
+| JSON (30) | 30 | 30 |
+| MMLU (342) | 283 (0.827) | 280 (0.819) |
+| GSM8K (250) | 241 (0.964) | 246 (0.984) |
+| MGSM (240) | 197 (0.821) | 202 (0.842) |
+| MATH-500 | 422 (0.844) | **459** (0.918) |
+
+IFEval is the clear gain. MATH-500 is the clear loss, and it is mostly replies without a final answer: of this
+recipe's 78 misses, 57 give no answer the grader can read (mix256k: 18 of its 41), while wrong answers are about
+even (21 against 23). The gap grows with difficulty (level 5: 98 of 134 against 112). GSM8K, MGSM, MMLU, tools and
+JSON differ by five questions or fewer, within what sets this size swing. No thinking-on quality run was made.
 
 ## Not supported
 

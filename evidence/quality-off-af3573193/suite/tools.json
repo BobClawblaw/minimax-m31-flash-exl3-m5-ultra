@@ -1,0 +1,13 @@
+{
+ "name": "tools",
+ "score": 0.95,
+ "cases": 60,
+ "passed": 57,
+ "seconds": 83.40012693405151,
+ "notes": [
+  "\"Translate 'good morning' into Spanish.\": got []",
+  "\"How do you say 'where is the station' in\": got []",
+  "'Set a timer for 5 minutes.': got [('set_timer', {'seconds': 300, 'label': '5-minute timer'})]"
+ ],
+ "details": {}
+}
